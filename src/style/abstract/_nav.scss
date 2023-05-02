@@ -1,0 +1,25 @@
+@use '../abstract/variable' as *;
+@use "sass:map";
+
+@mixin nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: map.get($nav , "max-width" );
+
+    ul {
+        display: flex;
+        padding: 0;
+        li {
+            list-style-type: none;
+
+            a {
+                padding: 0px 0px 0px 2em;
+                text-decoration: none;
+                color: #FF6060;
+                font-weight: 500;
+                font-size: 24px;
+            }
+        }
+    }
+}
+

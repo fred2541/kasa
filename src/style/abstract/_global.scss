@@ -1,0 +1,15 @@
+@use '../abstract/variable' as *;
+@use "sass:map";
+
+@mixin flexDisplay {
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Monserrat' sans-serif;
+    font-style: normal;
+    max-width: calc(map.get($root , "max-width" ) - (map.get($root , padding, right ) + map.get($root , padding, left ))) ;
+    padding: map.get($root , padding, top ) map.get($root , padding, right ) map.get($root , padding, bottom ) map.get($root , padding, left );
+}
+

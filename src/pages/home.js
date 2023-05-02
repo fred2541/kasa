@@ -1,7 +1,22 @@
+import Banner from '../components/banner';
+import { useEffect, useState } from 'react';
+import '../style/main.scss';
 
-function Home() {
+
+const Home = () => {
+  const [title, setTitle] = useState('')
+  const [imgSource, setimgSource] = useState('')
+  const [backgroundImage, setbackgroundImage] = useState('')
+
+  useEffect(() => {
+    setimgSource('./images/banner/banner1.jpg')
+    setTitle('Chez vous, partout et ailleurs')
+    setbackgroundImage('./images/banner/Background.jpg')
+  },[])
+
+
     return (
-      <div>acceuil</div>
+        <Banner imgSource={imgSource} title={title} background={backgroundImage}/>
     )
   }
   

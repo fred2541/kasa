@@ -1,0 +1,6 @@
+@use '../abstract/nav' as *;
+
+nav {
+    @include nav;
+    width: 100%;
+}

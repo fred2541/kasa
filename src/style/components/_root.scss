@@ -1,0 +1,5 @@
+@use '../abstract/global' as *;
+
+#root {
+    @include flexDisplay;
+}
