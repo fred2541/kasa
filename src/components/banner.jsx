@@ -1,8 +1,8 @@
-const Banner = ({imgSource, title}) => {
+const Banner = ({imgSource, title, about}) => {
     return (
         <div className="banner">
-            <img src={imgSource} alt={title} />
-            <h1>{title}</h1>
+            <img src={imgSource} alt={title} className={`${about ? "about" : ""}`}/>
+            {typeof(title) !== 'undefined' && <h1>{title}</h1>}
         </div>
     )
 }

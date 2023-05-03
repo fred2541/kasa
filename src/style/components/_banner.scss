@@ -1,20 +1,25 @@
 @use '../abstract/variable' as *;
 @use "sass:map";
 
-
 .banner {
     position: relative;
     height: 100%;
 
     img {
+        height:223px;
         width: 100%;
         filter: brightness(50%);
         border-radius: 25px;
         @media screen  and (max-width: map.get($root , "max-width-media" )) {
             border-radius: 10px;
-            max-height: 111px;
             height:111px;
             object-fit: cover;
+        }
+    }
+
+    .about {
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            height: 223px;
         }
     }
 
@@ -38,3 +43,4 @@
         }
     }
 }
+
