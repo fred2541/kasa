@@ -1,4 +1,4 @@
-const Banner = ({imgSource, title, background}) => {
+const Banner = ({imgSource, title}) => {
     return (
         <div className="banner">
             <img src={imgSource} alt={title} />

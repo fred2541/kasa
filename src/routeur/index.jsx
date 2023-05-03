@@ -8,8 +8,8 @@ import FicheLogement from "../pages/fiche-logement";
 import APropos from "../pages/a-propos";
 import Error404 from "../pages/404";
 
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../components/Layouts/header";
+import Footer from "../components/Layouts/footer";
 
 
 const PublicRouter = () => {

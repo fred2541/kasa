@@ -1,22 +1,27 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Cards from "./cards";
 
 const Gallery = () => {
     const [apparts, setApparts] = useState(null);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
+    const delay = ms => new Promise(
+        resolve => setTimeout(resolve, ms)
+      );
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const reponse = await fetch("/API/logements.json");
                 const jsonData = await reponse.json();
-                setApparts(jsonData)
-                setIsLoading(false)
-                console.log(jsonData)
-            } catch (error){
-                setIsLoading(false)
-                setError(error)
+                await delay(1000);
+                setApparts(jsonData);
+                setIsLoading(false);
+                console.log(jsonData);
+            } catch (err){
+                setIsLoading(false);
+                setError(err);
             }
         }
         fetchData() // Call fectData
@@ -34,12 +39,14 @@ const Gallery = () => {
         <div className="gallery">
             {
             apparts.map((appart) => 
-            <div>appart</div>
+            <Cards
+          dataAppart={appart}
+        />
             )
             }
         </div>
     ) : (
-        <div className="gallery">erreur</div>
+        <div className="gallery">Chargement des data en cours ...</div>
     );
 }
 export default Gallery

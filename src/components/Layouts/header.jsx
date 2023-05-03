@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import logoKasa from '../assets/images/logo.jpg'
+import { Link } from 'react-router-dom';
+import logoKasa from 'src/assets/images/logo.jpg';
 
 
 
