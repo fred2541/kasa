@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logoKasa from 'src/assets/images/logo.jpg';
 
 
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
       <nav className="nav">
@@ -12,10 +12,10 @@ function Header() {
         </Link>
         <ul>
           <li>
-            <Link to="/">Accueil</Link>
+            <NavLink to="/" activeClassName="active">Accueil</NavLink>
           </li>
           <li>
-            <Link to="/about">A Propos</Link>
+            <NavLink to="/about" activeClassName="active">A Propos</NavLink>
           </li>
         </ul>
       </nav>

@@ -10,6 +10,12 @@
         width: 100%;
         filter: brightness(50%);
         border-radius: 25px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            border-radius: 10px;
+            max-height: 111px;
+            height:111px;
+            object-fit: cover;
+        }
     }
 
     h1 {
@@ -18,7 +24,6 @@
         justify-content: center;
         position: absolute;
         width: 100%;
-        text-align: center;
         font-weight: 500;
         font-size: 48px;
         color: white;
@@ -26,5 +31,10 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            font-size: 24px;
+            width: 217px;
+            left: calc(106px + 16px);
+        }
     }
 }

@@ -6,6 +6,15 @@
     justify-content: space-between;
     max-width: map.get($nav , "max-width" );
     margin-bottom: 63px;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        margin-bottom: 16px;
+    }
+
+    img {
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            height: 47px;
+        }
+    }
 
     ul {
         display: flex;
@@ -19,6 +28,9 @@
                 color: #FF6060;
                 font-weight: 500;
                 font-size: 24px;
+                @media screen  and (max-width: map.get($root , "max-width-media" )) {
+                    font-size: 12px;
+                }
             }
         }
     }

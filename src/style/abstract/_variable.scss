@@ -9,6 +9,7 @@ $root: (
         "bottom": 2em,
         "left": 1em
     ),
+    "max-width-media": 960px,
 );
 
 // nav
@@ -16,5 +17,3 @@ $root: (
 $nav: (
     "max-width": 1240px
 );
-
-$banner: ("background": './images/banner/Background.jpg');
