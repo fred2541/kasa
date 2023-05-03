@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     max-width: map.get($nav , "max-width" );
+    margin-bottom: 63px;
 
     ul {
         display: flex;

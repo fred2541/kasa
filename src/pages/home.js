@@ -1,6 +1,7 @@
-import Banner from '../components/banner';
 import { useEffect, useState } from 'react';
 import '../style/main.scss';
+import Banner from '../components/banner';
+import Gallery from '../components/gallery';
 
 
 const Home = () => {
@@ -16,8 +17,15 @@ const Home = () => {
 
 
     return (
-        <Banner imgSource={imgSource} title={title} background={backgroundImage}/>
-    )
+      <div>
+        <Banner
+          imgSource={imgSource}
+          title={title}
+          background={backgroundImage}
+        />
+        <Gallery />
+      </div>
+    );
   }
   
   export default Home
