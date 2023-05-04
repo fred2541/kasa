@@ -15,10 +15,9 @@ const Gallery = () => {
             try {
                 const reponse = await fetch("/API/logements.json");
                 const jsonData = await reponse.json();
-                await delay(1000);
+                await delay(500);
                 setApparts(jsonData);
                 setIsLoading(false);
-                console.log(jsonData);
             } catch (err){
                 setIsLoading(false);
                 setError(err);
@@ -40,6 +39,7 @@ const Gallery = () => {
             {
             apparts.map((appart) => 
             <Cards
+            key={appart.id}
           dataAppart={appart}
         />
             )

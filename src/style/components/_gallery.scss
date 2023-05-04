@@ -1,5 +1,8 @@
 .gallery {
     width: 100%;
-    background: #F7F7F7;
+    background: #cccccc; // CHANGE TO #F7F7F7 !!!!!!! only for my screen !!!!!!!!!
     border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
