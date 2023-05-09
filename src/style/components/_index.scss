@@ -1,6 +1,7 @@
 @forward 'root';
-@forward 'header';
+@forward 'Layouts/header';
+@forward 'Layouts/footer';
 @forward 'nav';
 @forward 'banner';
-@forward 'gallery';
-@forward 'cards';
+@forward 'Cards/gallery';
+@forward 'Cards/cards';

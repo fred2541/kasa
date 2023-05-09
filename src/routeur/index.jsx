@@ -22,7 +22,6 @@ const PublicRouter = () => {
           <Route path="/logement" Component={FicheLogement}></Route>
           <Route path="/about" Component={APropos}></Route>
           <Route path="*" Component={Error404}></Route>
-          <Route element={<Footer />} />
         </Routes>
         <Footer />
       </Router>

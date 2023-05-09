@@ -1,4 +1,4 @@
-@use '../abstract/variable' as *;
+@use '/src/style/abstract/variable' as *;
 @use "sass:map";
 
 @mixin nav {
