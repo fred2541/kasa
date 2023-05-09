@@ -1,9 +1,13 @@
 @use '../abstract/variable' as *;
 @use "sass:map";
 
-a {
-    width: 33%;
-    margin-bottom: 50px;
+.gallery a {
+    width: 340px;
+    padding: 0px 2px 50px 2px;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        width: 100%;
+        padding: 0px 2px 35px 2px;
+    }
 }
 
 article {
@@ -16,15 +20,24 @@ article {
         width: 340px;
         border-radius: 10px;
         object-fit: cover;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            width: 100%;
+            height: initial;
+        }
     }
 }
 
 figcaption {
+    width: calc(100% - 35px); //100% - (margin + paddind) !!!
+    margin-left: 20px;
+    padding: 5px 10px 5px 5px;
+    border-radius: 15px 0px 0px 15px;
     color: white;
+    background: rgba(0, 0, 0, 0.4);
     font-weight: 500;
     font-size: 18px;
     display: block;
     float: left;
     position: absolute;
-    bottom: 0;
+    bottom: 22px;
   }

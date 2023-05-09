@@ -1,9 +1,17 @@
+@use '../abstract/variable' as *;
+@use "sass:map";
+
 .gallery {
     width: 100%;
-    background: #cccccc; // CHANGE TO #F7F7F7 !!!!!!! only for my screen !!!!!!!!!
+    background: #F7F7F7;
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 56px;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        background: initial;
+        border-radius: initial;
+        padding-top: initial;
+    }
 }
