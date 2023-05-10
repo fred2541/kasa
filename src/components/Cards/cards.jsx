@@ -3,7 +3,7 @@ const { NavLink } = require("react-router-dom")
 const Cards = ({dataAppart}) => {
     // console.log(dataAppart);
     return (
-        <NavLink>
+        <NavLink to={'logement/' + dataAppart.id}>
             <article>
                 <img src={dataAppart.cover} alt=""></img>
                 <figcaption>{dataAppart.title}</figcaption>

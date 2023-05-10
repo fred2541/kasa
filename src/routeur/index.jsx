@@ -19,7 +19,7 @@ const PublicRouter = () => {
         <Header />
         <Routes>
           <Route exact path="/" Component={Home}></Route>
-          <Route path="/logement" Component={FicheLogement}></Route>
+          <Route path="/logement/:id" Component={FicheLogement}></Route>
           <Route path="/about" Component={APropos}></Route>
           <Route path="*" Component={Error404}></Route>
         </Routes>

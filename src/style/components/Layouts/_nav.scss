@@ -1,4 +1,4 @@
-@use '../abstract/nav' as *;
+@use '/src/style/abstract/nav' as *;
 
 nav {
     @include nav;

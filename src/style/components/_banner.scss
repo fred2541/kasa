@@ -4,10 +4,6 @@
 .banner {
     position: relative;
     height: 100%;
-    margin-bottom: 43px;
-    @media screen  and (max-width: map.get($root , "max-width-media" )) {
-        margin-bottom: 22px;
-    }
 
     img {
         height:223px;

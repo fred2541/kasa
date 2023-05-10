@@ -8,8 +8,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 43px;
     padding-top: 56px;
     @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        margin-top: 22px;
         background: initial;
         border-radius: initial;
         padding-top: initial;

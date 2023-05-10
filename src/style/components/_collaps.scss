@@ -1,0 +1,61 @@
+@use '/src/style/abstract/variable' as *;
+@use "sass:map";
+
+.collaps {
+    z-index: 1;
+    text-align: left;
+    border:none;
+    background: #FF6060;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    &::after {
+        float: right;
+        margin-right: 33px;
+        content: url("../../assets/Icons/Open.svg");
+    }
+}
+
+.collapsBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.collapsBox .activeCollaps::after {
+    content: url("../../assets/Icons/Close.svg");
+}
+
+.large {
+    width: 84%;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        width: 100%;
+    }
+  }
+
+.active {
+    display: initial;
+}
+
+.unactive {
+    display: none;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    top: -9px;
+    background: #cccccc;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FF6060;
+    padding: 36px 27px 19px 18px;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        font-weight: 400;
+        font-size: 12px;
+    }
+}
+p {
+    margin: 0;
+}

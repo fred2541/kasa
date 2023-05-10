@@ -1,0 +1,12 @@
+@use '/src/style/abstract/variable' as *;
+@use "sass:map";
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .collapsBox {
+    margin-top: 30px;
+}
