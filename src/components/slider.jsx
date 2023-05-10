@@ -1,23 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState, useCallback } from "react";
 
 const Slider = ({pictures}) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [backActive, setBackActive] = useState(true);
-    const [nextActive, setNextActive] = useState(true);
     const srcImage = pictures[currentImageIndex];
 
-    useEffect(() => {
-        currentImageIndex === 0 ? setBackActive(false) : setBackActive(true);
-        currentImageIndex >= (pictures.length - 1) ? setNextActive(false) : setNextActive(true);
+    const back = useCallback(() => {
+            currentImageIndex === 0 ? setCurrentImageIndex(pictures.length - 1) : setCurrentImageIndex(currentImageIndex - 1);
     }, [currentImageIndex, pictures]);
 
-    const back = () => {
-            currentImageIndex === 0 ? setCurrentImageIndex(pictures.length - 1) : setCurrentImageIndex(currentImageIndex - 1);
-    }
-
-    const next = () => {
+    const next = useCallback(() => {
         currentImageIndex >= (pictures.length - 1) ? setCurrentImageIndex(0) : setCurrentImageIndex(currentImageIndex + 1);
-}
+}, [currentImageIndex, pictures]);
 
     return (
         <div className="slide">

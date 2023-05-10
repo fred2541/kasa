@@ -5,7 +5,7 @@ import Error404 from "./404";
 
 function FicheLogement() {
     const {id} = useParams();
-    const [logement, setLogement] = useState(false);
+    const [logement, setLogement] = useState([]);
     const [error, setError] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -19,13 +19,13 @@ function FicheLogement() {
           // return only the ID to find
           const data = jsonData.find((logement) => logement.id === id);
           if (!data) {
-            throw new SyntaxError("id incorrect!"); // (*)
+            throw new SyntaxError(); // (*)
           }
           setLogement(data);
-          setIsLoading(false);
       } catch (err){
-          setIsLoading(false);
-          setError(err);
+          setError(true);
+      } finally {
+        setIsLoading(false);
       }
   }
   fetchData() // Call fecthData
