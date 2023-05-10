@@ -9,8 +9,7 @@ const Slider = ({pictures}) => {
     useEffect(() => {
         currentImageIndex === 0 ? setBackActive(false) : setBackActive(true);
         currentImageIndex >= (pictures.length - 1) ? setNextActive(false) : setNextActive(true);
-        console.log('Current: ' + currentImageIndex + ' Length ' + (pictures.length - 1));
-    }, [currentImageIndex]);
+    }, [currentImageIndex, pictures]);
 
     const back = () => {
             currentImageIndex === 0 ? setCurrentImageIndex(pictures.length - 1) : setCurrentImageIndex(currentImageIndex - 1);
