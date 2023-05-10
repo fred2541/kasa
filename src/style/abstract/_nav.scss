@@ -5,9 +5,7 @@
     display: flex;
     justify-content: space-between;
     max-width: map.get($nav , "max-width" );
-    margin-bottom: 63px;
     @media screen  and (max-width: map.get($root , "max-width-media" )) {
-        margin-bottom: 16px;
     }
 
     img {

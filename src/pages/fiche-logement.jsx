@@ -1,5 +1,7 @@
-import { useParams } from "react-router-dom"
+import { useParams, Navigate } from "react-router-dom"
 import { useState, useEffect } from "react";
+import Slider from "src/components/slider";
+import Error404 from "./404";
 
 function FicheLogement() {
     const {id} = useParams();
@@ -32,13 +34,15 @@ function FicheLogement() {
 if (error) { // gerer l'erreur fait redirection 404 !!!!!
   return (
       <div className="error">
-          <p>Erreur: {error.message}</p>
+          <Navigate to="/erreur" replace={<Error404 />} />
       </div>
   )
 }
 
 return !isLoading ? (
-      <div>fiche logement {location}</div>
+      <div className="logement">
+        <Slider pictures={pictures}/>
+      </div>
     ) : (
       <div>Chargement des data en cours ...</div>
   );
