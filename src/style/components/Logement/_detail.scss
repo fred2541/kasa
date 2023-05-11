@@ -1,0 +1,67 @@
+@use '/src/style/abstract/variable' as *;
+@use "sass:map";
+
+.containerDetail, .location, .location > div:nth-child(3), .proprio, .proprio > div {
+    display: flex;
+}
+.containerDetail {
+    margin-top: 30px;
+    justify-content: space-between;
+    font-weight: 500;
+    color: #FF6060;
+}
+
+.location {
+    width: 80%;
+    flex-direction: column;
+    > div:first-child { // title
+        font-size: 36px;
+    }
+    > div:nth-child(2) { // location
+        font-size: 18px;
+    }
+
+    > div:nth-child(3) { // tags
+        flex-wrap: wrap;
+        margin-top: 20px;
+        > div {
+            background-color: #FF6060;
+        min-width: 140px;
+        font-size: 14px;
+        margin: 0 10px 10px 0 ;
+        margin-right: 10px;
+        padding: 3px 5px 3px 5px;
+        border-radius: 10px;
+        color: #FFFFFF;
+        text-align: center;
+        }
+        
+    }
+}
+
+.proprio {
+    flex-direction: column;
+    align-items: end;
+    width: 20%;
+    font-size: 18px;
+    > div > div > img { // picture proprio
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+    > div > img { // etoile
+        width: 24px;
+        height: 24px;
+        margin: 27px 0 0 15px;
+    }
+    > div {
+        width: 100%;
+        justify-content: end;
+        > div:first-child {
+            max-width: min-content;
+            margin: auto;
+            margin-right: 10px;
+            text-align: end;
+        }
+    }
+}

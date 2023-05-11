@@ -1,7 +1,8 @@
 import { useParams, Navigate } from "react-router-dom"
 import { useState, useEffect } from "react";
-import Slider from "src/components/slider";
+import Slider from "src/components/Logement/slider";
 import Error404 from "./404";
+import Detail from "src/components/Logement/detail";
 
 function FicheLogement() {
     const {id} = useParams();
@@ -10,6 +11,7 @@ function FicheLogement() {
     const [isLoading, setIsLoading] = useState(true);
 
     const { title, location, pictures, tags, host, rating, equipments, description} = logement;
+    const data = {title: title, location: location, tags: tags, host: host, rating: rating, equipments: equipments, description: description};
 
     useEffect(() => {
     const fetchData = async () => {
@@ -42,6 +44,7 @@ if (error) { // on error, redirect to 404
 return !isLoading ? (
       <div className="logement">
         <Slider pictures={pictures}/>
+        <Detail data={data}/>
       </div>
     ) : (
       <div>Chargement des data en cours ...</div>

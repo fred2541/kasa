@@ -12,12 +12,12 @@
     img {
         height:223px;
         width: 100%;
+        object-fit: cover;
         filter: brightness(50%);
         border-radius: 25px;
         @media screen  and (max-width: map.get($root , "max-width-media" )) {
             border-radius: 10px;
             height:111px;
-            object-fit: cover;
         }
     }
 

@@ -29,7 +29,7 @@
     left: 24px;
     top: 50%;
     transform: translateY(-50%);
-    content: url("../../assets/Icons/left.png");
+    content: url("../../../assets/Icons/left.png");
     @media screen  and (max-width: map.get($root , "max-width-media" )) {
         height: 20px;
     }
@@ -41,7 +41,7 @@
     right: 24px;
     top: 50%;
     transform: translateY(-50%);
-    content: url("../../assets/Icons/right.png");
+    content: url("../../../assets/Icons/right.png");
     @media screen  and (max-width: map.get($root , "max-width-media" )) {
         height: 20px;
     }
