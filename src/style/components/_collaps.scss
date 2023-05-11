@@ -2,18 +2,32 @@
 @use "sass:map";
 
 .collaps {
+    width: 100%;
     z-index: 1;
     text-align: left;
+    padding-left: 20px;
     border:none;
     background: #FF6060;
     border-radius: 5px;
     color: white;
     font-weight: 500;
-    font-size: 24px;
     &::after {
+        position: relative;
         float: right;
+        content:"";
+        margin-top: 8px;
         margin-right: 33px;
-        content: url("../../assets/Icons/Open.svg");
+        height: 14px;
+        width: 24px;
+        background-image: url("../../assets/Icons/Open.svg");
+        background-size: 24px 14px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            height: 9px;
+            width: 16px;
+            margin-top: 4px;
+            margin-right: 7px;
+            background-size: 16px 9px;
+        }
     }
 }
 
@@ -21,17 +35,50 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 .collapsBox .activeCollaps::after {
-    content: url("../../assets/Icons/Close.svg");
+    content:"";
+    background-image: url("../../assets/Icons/Close.svg");
+    background-size: cover;
 }
 
+.large button {
+    font-size: 24px;
+    height: 47px;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        font-size: 13px;
+        height: 30px;
+    }
+}
 .large {
     width: 84%;
     @media screen  and (max-width: map.get($root , "max-width-media" )) {
         width: 100%;
+        font-size: 13px;
     }
-  }
+}
+
+.medium button {
+    font-size: 18px;
+    height: 52px;
+    &::after {
+        margin-right: 13px;
+    }
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        font-size: 13px;
+        height: 30px;
+    }
+}
+.medium {
+    width: 47%;
+    font-size: 18px;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
 
 .active {
     display: initial;
@@ -44,8 +91,10 @@
 
 .content {
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
     top: -9px;
-    background: #cccccc;
+    background: #F7F7F7;
     border-radius: 5px;
     font-weight: 400;
     font-size: 24px;
@@ -56,6 +105,11 @@
         font-size: 12px;
     }
 }
+.medium .content {
+    font-size: 18px;
+}
+
+
 p {
     margin: 0;
 }

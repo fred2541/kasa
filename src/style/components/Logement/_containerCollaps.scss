@@ -1,0 +1,17 @@
+@use '/src/style/abstract/variable' as *;
+@use "sass:map";
+
+.containerCollaps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        flex-direction: column;
+        margin-top: 16px;
+    }
+}
+
+.containerCollaps span {
+    display: block;
+    width: 100%;
+}

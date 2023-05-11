@@ -9,7 +9,7 @@ const Collaps = ({size = 'large', collapsed = false, title, contenu = false}) =>
     className.push('collaps');
 
     return (
-      <div className="collapsBox large">
+      <div className={'collapsBox ' + size}>
         <button type="button" className={className.join(" ")} onClick={() => activeCollaps ? setactiveCollaps(false) : setactiveCollaps(true)}>
           {title}
         </button>
