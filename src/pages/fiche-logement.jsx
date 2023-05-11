@@ -18,11 +18,11 @@ function FicheLogement() {
           const jsonData = await reponse.json();
           // return only the ID to find
           const data = jsonData.find((logement) => logement.id === id);
-          if (!data) {
+          if (!data) { // if ID dont exist => error
             throw new SyntaxError(); // (*)
           }
           setLogement(data);
-      } catch (err){
+      } catch (err){ // error on fetch or ID dont exist on json file
           setError(true);
       } finally {
         setIsLoading(false);
@@ -31,7 +31,7 @@ function FicheLogement() {
   fetchData() // Call fecthData
 }, [id]);
 
-if (error) { // gerer l'erreur fait redirection 404 !!!!!
+if (error) { // on error, redirect to 404
   return (
       <div className="error">
           <Navigate to="/erreur" replace={<Error404 />} />
