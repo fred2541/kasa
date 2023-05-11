@@ -9,21 +9,37 @@
     justify-content: space-between;
     font-weight: 500;
     color: #FF6060;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        margin-top: 15px;
+        flex-direction: column;
+    }
 }
 
 .location {
     width: 80%;
     flex-direction: column;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        width: 100%;
+    }
     > div:first-child { // title
         font-size: 36px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            font-size: 18px;
+        }
     }
     > div:nth-child(2) { // location
         font-size: 18px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            font-size: 14px;
+            margin-top: 15px;
+        }
     }
-
     > div:nth-child(3) { // tags
         flex-wrap: wrap;
         margin-top: 20px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            margin-top: 10px;
+        }
         > div {
             background-color: #FF6060;
         min-width: 140px;
@@ -34,6 +50,10 @@
         border-radius: 10px;
         color: #FFFFFF;
         text-align: center;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            font-size: 10px;
+            min-width: 84px;
+        }
         }
         
     }
@@ -44,19 +64,37 @@
     align-items: end;
     width: 20%;
     font-size: 18px;
+    @media screen  and (max-width: map.get($root , "max-width-media" )) {
+        flex-direction: row-reverse;
+        align-items: center;
+        font-size: 12px;
+        width: 100%;
+    }
     > div > div > img { // picture proprio
         width: 64px;
         height: 64px;
         border-radius: 50%;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            width: 32px;
+            height: 32px;
+        }
     }
     > div > img { // etoile
         width: 24px;
         height: 24px;
         margin: 27px 0 0 15px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            width: 13px;
+            height: 13px;
+            margin: 0 7px 0 0;
+        }
     }
     > div {
         width: 100%;
         justify-content: end;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            justify-content: initial;
+        }
         > div:first-child {
             max-width: min-content;
             margin: auto;
