@@ -1,0 +1,7 @@
+@use '/src/style/abstract/variable' as *;
+@use "sass:map";
+
+.App {
+    max-width: calc(map.get($root , "max-width" ) - (map.get($root , padding, right ) + map.get($root , padding, left ))) ;
+    padding: map.get($root , padding, top ) map.get($root , padding, right ) map.get($root , padding, bottom ) map.get($root , padding, left );
+}

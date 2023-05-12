@@ -1,6 +1,10 @@
-function Error404() {
+import Erreur from "src/components/404"
+
+const Error404 = () => {
     return (
-      <div>Oups! 404</div>
+      <div>
+        <Erreur />
+      </div>
     )
   }
   

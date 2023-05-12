@@ -4,7 +4,7 @@
 @mixin nav {
     display: flex;
     justify-content: space-between;
-    max-width: map.get($nav , "max-width" );
+    max-width: map.get($root , "max-width" );
     @media screen  and (max-width: map.get($root , "max-width-media" )) {
     }
 

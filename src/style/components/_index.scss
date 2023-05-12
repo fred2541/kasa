@@ -1,4 +1,5 @@
 @forward 'root';
+@forward 'Layouts/app';
 @forward 'Layouts/header';
 @forward 'Layouts/footer';
 @forward 'Layouts/nav';
@@ -9,3 +10,4 @@
 @forward 'Logement/slide';
 @forward 'Logement/containerDetail';
 @forward 'Logement/containerCollaps';
+@forward 'erreur';

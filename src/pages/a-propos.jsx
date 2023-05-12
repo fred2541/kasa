@@ -1,4 +1,3 @@
-import '../style/main.scss';
 import Banner from 'src/components/banner';
 import Collaps from 'src/components/collaps';
 

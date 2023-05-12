@@ -1,5 +1,10 @@
 @use '../abstract/global' as *;
 
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+
 #root {
     @include flexDisplay;
 }

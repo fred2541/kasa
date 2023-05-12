@@ -2,12 +2,12 @@
 @use "sass:map";
 
 .footer {
+    margin-top: 50px;
     background: black;
     height: 209px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     img {
         margin-top: 66px;
         height: 40px;

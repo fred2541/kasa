@@ -1,0 +1,42 @@
+@use '/src/style/abstract/variable' as *;
+@use "sass:map";
+
+.erreur, a {
+    color: #FF6060;
+    font-weight: 500;
+}
+
+.erreur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div:first-child {
+        font-weight: 700;
+        font-size: 288px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            font-size: 96px;
+            margin-top: 180px;
+        }
+    }
+    div:nth-child(2) {
+        font-size: 36px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    div:nth-child(3) {
+        margin-top: 180px;
+        @media screen  and (max-width: map.get($root , "max-width-media" )) {
+            font-size: 18px;
+            margin-top: 130px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            @media screen  and (max-width: map.get($root , "max-width-media" )) {
+                font-size: 14px;
+            }
+        }
+    }
+}
