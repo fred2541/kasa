@@ -15,7 +15,7 @@ const Gallery = () => {
             try {
                 const reponse = await fetch("/API/logements.json");
                 const jsonData = await reponse.json();
-                await delay(500);
+                await delay(500); // remove this on Production !!
                 setApparts(jsonData);
                 setIsLoading(false);
             } catch (err){
