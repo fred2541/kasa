@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const Collaps = ({size = 'large', collapsed = false, title, contenu = false}) => {
+const Collaps = ({size = 'large', collapsed = false, title = "", contenu = ""}) => {
     const [activeCollaps, setactiveCollaps] = useState(collapsed);
 
     let className = [];
